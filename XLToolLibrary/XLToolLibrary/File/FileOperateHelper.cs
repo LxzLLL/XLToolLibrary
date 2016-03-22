@@ -256,6 +256,22 @@ namespace XLToolLibrary.Utilities
         }
         #endregion
 
+        #region 根据日期设置文件存放路径
+        /// <summary>
+        /// 根据日期设置文件存放路径
+        /// </summary>
+        /// <param name="fileExtensionName"></param>
+        /// <returns></returns>
+        public static string GetFilePathFormattedByDate()
+        {
+            var filePath = System.DateTime.Now.Year.ToString()
+                   + "\\" + System.DateTime.Now.Month.ToString()
+                   + "\\" + System.DateTime.Now.Day.ToString();
+
+            return filePath;
+        }
+        #endregion
+
         #region 在当前目录下创建目录
         /****************************************
          * 函数名称：FolderCreate
