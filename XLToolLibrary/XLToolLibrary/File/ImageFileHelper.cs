@@ -57,19 +57,16 @@ namespace XLToolLibrary.Utilities
         /// <param name="ImgStream">图片文件流</param>
         /// <param name="waterStr">如果为空,表示不加水印</param>
         /// <returns></returns>
-        public static System.Drawing.Image GetThumbNail(
-            int toW, int toH,
-            System.IO.Stream ImgStream,
-            string waterStr = null)
+        public static Image GetThumbNail( int toW, int toH,Stream ImgStream,string waterStr = null)
         {
             //原图
-            System.Drawing.Image oImg = System.Drawing.Image.FromStream(ImgStream);
+            Image oImg = Image.FromStream(ImgStream);
             //原图尺寸
-            System.Drawing.Size orgSize = new System.Drawing.Size(oImg.Width, oImg.Height);
+            Size orgSize = new Size(oImg.Width, oImg.Height);
             //目标尺寸
-            System.Drawing.Size toSize = new System.Drawing.Size(toW, toH);
+            Size toSize = new Size(toW, toH);
             //真实尺寸
-            System.Drawing.Size realSize = Resize(toSize, orgSize);
+            Size realSize = Resize(toSize, orgSize);
             //如果真实的尺寸 >大于原图尺寸 图片不做拉伸
             if (realSize.Width > orgSize.Width && realSize.Height > orgSize.Height)
             {
@@ -77,15 +74,15 @@ namespace XLToolLibrary.Utilities
                 realSize.Height = orgSize.Height;
             }
 
-            System.Drawing.Image bitmap = new System.Drawing.Bitmap(realSize.Width, realSize.Height);
-            using (System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(bitmap))
+            Image bitmap = new Bitmap(realSize.Width, realSize.Height);
+            using (Graphics g = Graphics.FromImage(bitmap))
             {
-                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
-                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-                g.Clear(System.Drawing.Color.White);
-                g.DrawImage(oImg, new System.Drawing.Rectangle(0, 0, realSize.Width, realSize.Height),
-                    new System.Drawing.Rectangle(0, 0, orgSize.Width, orgSize.Height),
-                    System.Drawing.GraphicsUnit.Pixel);
+                g.InterpolationMode = InterpolationMode.High;
+                g.SmoothingMode = SmoothingMode.HighQuality;
+                g.Clear(Color.White);
+                g.DrawImage(oImg, new Rectangle(0, 0, realSize.Width, realSize.Height),
+                    new Rectangle(0, 0, orgSize.Width, orgSize.Height),
+                    GraphicsUnit.Pixel);
             }
 
             //add water
@@ -105,12 +102,12 @@ namespace XLToolLibrary.Utilities
         /// <param name="waterStr"></param>
         /// <param name="ImgStream"></param>
         /// <returns></returns>
-        private static System.Drawing.Image addWater(string waterStr, System.Drawing.Image ImgStream)
+        private static Image addWater(string waterStr, Image ImgStream)
         {
             //源图片
-            System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(ImgStream);
+            Graphics g = Graphics.FromImage(ImgStream);
             //水印图片
-            System.Drawing.Image bitMapWater = new System.Drawing.Bitmap(waterStr);
+            Image bitMapWater = new Bitmap(waterStr);
             //加水印
             g.InterpolationMode = InterpolationMode.High;
             g.SmoothingMode = SmoothingMode.HighQuality;
@@ -125,11 +122,9 @@ namespace XLToolLibrary.Utilities
         /// <param name="ViewSize">外框大小</param>
         /// <param name="ImageSize">图片的实际大小</param>
         /// <returns></returns>
-        public static System.Drawing.Size Resize(
-            System.Drawing.Size ViewSize,
-            System.Drawing.Size ImageSize)
+        public static Size Resize(Size ViewSize,Size ImageSize)
         {
-            System.Drawing.Size MySize = new System.Drawing.Size();
+            Size MySize = new Size();
             if (ViewSize.Width >= ImageSize.Width && ViewSize.Height >= ImageSize.Height)
             {
                 MySize.Height = ImageSize.Height;

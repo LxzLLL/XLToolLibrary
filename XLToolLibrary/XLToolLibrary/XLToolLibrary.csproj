@@ -110,6 +110,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dll\AutoMapper.dll" />
+    <Content Include="Dll\Dapper.dll" />
+    <Content Include="Dll\RestSharp.dll" />
     <Content Include="Dll\ServiceStack.Text.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
