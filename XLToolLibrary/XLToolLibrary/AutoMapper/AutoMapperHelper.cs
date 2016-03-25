@@ -20,8 +20,8 @@ namespace XLToolLibrary.Utilities
         /// <returns></returns>
         public static TTarget AutoConvert(TSource entity)
         {
-            AutoMapper.Mapper.CreateMap<TSource, TTarget>();
-            return AutoMapper.Mapper.Map<TSource, TTarget>(entity);
+            Mapper.CreateMap<TSource, TTarget>();
+            return Mapper.Map<TSource, TTarget>(entity);
         }
 
         /// <summary>
