@@ -139,12 +139,19 @@
     <Content Include="Dll\PanGu.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Dll\PanGuDictionaries\ChsDoubleName1.txt" />
+    <Content Include="Dll\PanGuDictionaries\ChsDoubleName2.txt" />
+    <Content Include="Dll\PanGuDictionaries\ChsSingleName.txt" />
+    <Content Include="Dll\PanGuDictionaries\Stopword.txt" />
+    <Content Include="Dll\PanGuDictionaries\Synonym.txt" />
+    <Content Include="Dll\PanGuDictionaries\Wildcard.txt" />
     <Content Include="Dll\RestSharp.dll" />
     <Content Include="Dll\ServiceStack.Text.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Dll\PanGuDictionaries\Dict.dct" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
