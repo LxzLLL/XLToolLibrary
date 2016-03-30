@@ -52,7 +52,23 @@
       <HintPath>..\..\..\Unicellular\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="Lucene.Net, Version=2.9.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="PanGu, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\PanGu.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.HighLight, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\PanGu.HighLight.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.Lucene.Analyzer, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\PanGu.Lucene.Analyzer.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\Unicellular\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
       <Private>True</Private>
@@ -91,6 +107,8 @@
     <Compile Include="File\FileOperateHelper.cs" />
     <Compile Include="File\ImageFileHelper.cs" />
     <Compile Include="File\INIFileHelper.cs" />
+    <Compile Include="FullSearch\FullTextOperation.cs" />
+    <Compile Include="FullSearch\PanGuLuceneHelper.cs" />
     <Compile Include="Http\HttpHelper.cs" />
     <Compile Include="Http\HttpRequestMessageExtensions.cs" />
     <Compile Include="Http\ResponseResult.cs" />
@@ -110,6 +128,17 @@
   <ItemGroup>
     <Content Include="Dll\AutoMapper.dll" />
     <Content Include="Dll\Dapper.dll" />
+    <Content Include="Dll\Lucene.Net.dll" />
+    <Content Include="Dll\Lucene.Net.pdb" />
+    <Content Include="Dll\PanGu.dll" />
+    <Content Include="Dll\PanGu.HighLight.dll" />
+    <Content Include="Dll\PanGu.HighLight.pdb" />
+    <Content Include="Dll\PanGu.Lucene.Analyzer.dll" />
+    <Content Include="Dll\PanGu.Lucene.Analyzer.pdb" />
+    <Content Include="Dll\PanGu.pdb" />
+    <Content Include="Dll\PanGu.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Dll\RestSharp.dll" />
     <Content Include="Dll\ServiceStack.Text.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

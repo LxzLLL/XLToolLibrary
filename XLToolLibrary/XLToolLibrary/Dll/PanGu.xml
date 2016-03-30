@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PanGuSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.codeplex.com/pangusegment">
+  <DictionaryPath>..\Config\PanGuDictionaries</DictionaryPath>
+  <MatchOptions>
+    <ChineseNameIdentify>true</ChineseNameIdentify><!--中文名识别-->
+    <FrequencyFirst>true</FrequencyFirst><!--词频优先-->
+    <MultiDimensionality>true</MultiDimensionality><!--多元分词-->
+    <EnglishMultiDimensionality>false</EnglishMultiDimensionality><!--英文多元分词，这个开关，会将英文中的字母与数字分开-->
+    <FilterStopWords>true</FilterStopWords><!--过滤停用词-->
+    <IgnoreSpace>true</IgnoreSpace><!---忽略空格、回车、Tab-->
+    <ForceSingleWord>true</ForceSingleWord><!--强制一元分词-->
+    <TraditionalChineseEnabled>false</TraditionalChineseEnabled><!--繁体字分词-->
+    <OutputSimplifiedTraditional>false</OutputSimplifiedTraditional><!--同时输出简体和繁体-->
+    <UnknowWordIdentify>true</UnknowWordIdentify><!--未登录词识别-->
+    <FilterEnglish>false</FilterEnglish><!--过滤英文,这个选项只有在过滤停用词选项生效时才有效-->
+    <FilterNumeric>false</FilterNumeric><!--过滤数字,这个选项只有在过滤停用词选项生效时才有效-->
+    <IgnoreCapital>false</IgnoreCapital><!--忽略英文大小写-->
+    <EnglishSegment>true</EnglishSegment><!--英文分词-->
+    <SynonymOutput>false</SynonymOutput><!--同义词输出,一般用于对搜索字符串的分词,不建议在索引时使用-->
+    <WildcardOutput>false</WildcardOutput><!--通配符匹配输出,一般用于对搜索字符串的分词,不建议在索引时使用-->
+    <WildcardSegment>false</WildcardSegment><!--对通配符匹配的结果分词-->
+    <CustomRule>false</CustomRule><!--是否进行用户自定义规则匹配-->
+  </MatchOptions>
+  <Parameters>
+    <Redundancy>0</Redundancy><!--多元分词冗余度-->
+    <UnknowRank>1</UnknowRank><!--未登录词权值-->
+    <BestRank>5</BestRank><!--最匹配词权值-->
+    <SecRank>3</SecRank><!--次匹配词权值-->
+    <ThirdRank>2</ThirdRank><!--再次匹配词权值-->
+    <SingleRank>1</SingleRank><!--强行输出的单字权值-->
+    <NumericRank>1</NumericRank><!--数字的权值-->
+    <EnglishRank>5</EnglishRank><!--英文词汇的权值-->
+    <SymbolRank>1</SymbolRank><!--符号的权值 -->
+    <SimplifiedTraditionalRank>1</SimplifiedTraditionalRank><!--强制同时输出简繁汉字时，非原来文本的汉字输出权值(比如原来文本是简体，这里就是输出的繁体字的权值，反之亦然。)-->
+    <SynonymRank>1</SynonymRank><!--同义词权值-->
+    <WildcardRank>1</WildcardRank><!--通配符匹配结果的权值-->
+    <FilterEnglishLength>50</FilterEnglishLength><!--过滤英文选项生效时，过滤大于这个长度的英文。-->
+    <FilterNumericLength>50</FilterNumericLength><!--过滤数字选项生效时，过滤大于这个长度的数字。-->
+  </Parameters>
+</PanGuSettings>
+
