@@ -107,6 +107,7 @@
     <Compile Include="File\FileOperateHelper.cs" />
     <Compile Include="File\ImageFileHelper.cs" />
     <Compile Include="File\INIFileHelper.cs" />
+    <Compile Include="FullSearch\CustomAttribute.cs" />
     <Compile Include="FullSearch\FullTextOperation.cs" />
     <Compile Include="FullSearch\PanGuLuceneHelper.cs" />
     <Compile Include="Http\HttpHelper.cs" />
