@@ -32,5 +32,14 @@ namespace XLToolLibrary.Utilities
             }
             return newRandom.ToString();
         }
+
+        /// <summary>
+        /// 生成32位uuid，不带连字符
+        /// </summary>
+        /// <returns></returns>
+        public static string GetUUID()
+        {
+            return Guid.NewGuid().ToString().Replace( "-", "" ).ToLower();
+        }
     }
 }

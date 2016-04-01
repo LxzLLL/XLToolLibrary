@@ -44,5 +44,30 @@ namespace XLToolLibrary.Utilities
             sb.Append( "}" );
             return sb.ToString();
         }
+
+        /// <summary>
+        /// 将json字符串转换为object对象
+        /// </summary>
+        /// <param name="sJson">json字符串</param>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        public static T ConvertJsonString2Object<T>(string sJson)
+        {
+            T tResult = default( T );
+            if ( string.IsNullOrEmpty( sJson ) )
+            {
+                return tResult;
+            }
+            try
+            {
+                tResult = JsonConvert.DeserializeObject<T>( sJson );
+            }
+            catch(Exception ex )
+            {
+                string str = ex.Message;
+            }
+            return tResult;
+        }
     }
 }
