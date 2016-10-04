@@ -51,14 +51,6 @@ namespace XLToolLibrary.Utilities
         #region 初始化
 
         /// <summary>
-        /// 不需要无参构造函数
-        /// </summary>
-        private XmlHelper()
-        {
-
-        }
-
-        /// <summary>
         /// 初始化
         /// </summary>
         /// <param name="strPath"></param>
@@ -78,8 +70,8 @@ namespace XLToolLibrary.Utilities
         /// </summary>
         /// <typeparam name="C">类型</typeparam>
         /// <param name="strFormat">格式化字符串</param>
-        /// <param name="types">xml反序列化包含的额外的类型</param>
-        /// <returns>List<T>，如果未找到则返回默认的T列表</returns>
+        /// <param name="extraTypes">xml反序列化包含的额外的类型</param>
+        /// <returns>List<C>，如果未找到则返回默认的T列表</returns>
         public List<C> GetObject<C>( string strFormat, Type[ ] extraTypes = null )
         {
             List<C> tlist = new List<C>();
